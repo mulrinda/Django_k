@@ -1,3 +1,7 @@
 from django.db import models
+from maps.models import Spot
 
-# Create your models here.
+class Theme(models.Model):
+    theme_name = models.CharField(max_length=500)
+    actor_img = models.CharField(max_length=500)
+    spot_cd = models.ForeignKey(Spot, on_delete=models.CASCADE)

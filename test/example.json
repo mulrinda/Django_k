@@ -1,0 +1,194 @@
+{ 
+  "http://data.visitkorea.or.kr/resource/1874105" : { 
+    "http://data.visitkorea.or.kr/property/postalCode" : [ { 
+      "type" : "literal" ,
+      "value" : "04743"
+    }
+     ] ,
+    "http://purl.org/dc/elements/1.1/description" : [ { 
+      "type" : "literal" ,
+      "value" : "응봉산(해발 94m)에서 바라보는 일출은 한강과 서울숲, 잠실운동장 등 서울 동부권의 모습을 한눈에 볼 수 있다. 한강조망명소로 사진 작가 및 많은 이들이 찾고 있으며, 매년 1월 1일 해맞이 행사를 실시한다. 또한, 개나리꽃의 명소이기도 한 응봉산에서는 4월경 개나리 축제를 열고 있다." ,
+      "lang" : "ko"
+    }
+     ] ,
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ { 
+      "type" : "literal" ,
+      "value" : "37.5471796096" ,
+      "datatype" : "http://www.w3.org/2001/XMLSchema#double"
+    }
+     ] ,
+    "http://www.w3.org/2004/02/skos/core#altLabel" : [ { 
+      "type" : "literal" ,
+      "value" : "응봉산(서울)" ,
+      "lang" : "ko"
+    }
+     ] ,
+    "http://data.visitkorea.or.kr/property/location" : [ { 
+      "type" : "uri" ,
+      "value" : "http://data.visitkorea.or.kr/resource/CATEGORY:011604"
+    }
+     ] ,
+    "http://data.visitkorea.or.kr/property/tel" : [ { 
+      "type" : "literal" ,
+      "value" : "02-2286-6061"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "응봉산(서울)" ,
+      "lang" : "ko"
+    }
+     ] ,
+    "http://data.visitkorea.or.kr/property/category" : [ { 
+      "type" : "uri" ,
+      "value" : "http://data.visitkorea.or.kr/resource/A01010400"
+    }
+     ] ,
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ { 
+      "type" : "literal" ,
+      "value" : "127.0281781551" ,
+      "datatype" : "http://www.w3.org/2001/XMLSchema#double"
+    }
+     ] ,
+    "http://xmlns.com/foaf/0.1/name" : [ { 
+      "type" : "literal" ,
+      "value" : "응봉산(서울)" ,
+      "lang" : "ko"
+    }
+     ] ,
+    "http://data.visitkorea.or.kr/property/petsAvailable" : [ { 
+      "type" : "literal" ,
+      "value" : "불가능"
+    }
+     ] ,
+    "http://data.visitkorea.or.kr/property/address" : [ { 
+      "type" : "literal" ,
+      "value" : "서울특별시 성동구 금호동4가 1540" ,
+      "lang" : "ko"
+    }
+     ] ,
+    "http://data.visitkorea.or.kr/property/creditCard" : [ { 
+      "type" : "literal" ,
+      "value" : "불가능"
+    }
+     ] ,
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://data.visitkorea.or.kr/ontology/Place"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://data.visitkorea.or.kr/ontology/NaturalAttraction"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "https://schema.org/Place"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://data.visitkorea.or.kr/ontology/Mountain"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://data.visitkorea.or.kr/ontology/Attraction"
+    }
+     ] ,
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ { 
+      "type" : "literal" ,
+      "value" : "응봉산(서울)" ,
+      "lang" : "ko"
+    }
+     ] ,
+    "http://xmlns.com/foaf/0.1/depiction" : [ { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/85/1796285_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/15/1796315_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/81/1796281_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/17/1796317_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/05/1796305_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/06/1796306_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/76/1796276_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/89/2022189_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/12/1796312_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/83/1796283_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/90/2022190_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/91/2022191_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/10/1796310_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/77/1796277_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/21/1796321_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/88/2022188_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/78/1796278_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/87/2022187_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/79/1796279_image2_1.jpg"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://tong.visitkorea.or.kr/cms/resource/84/1796284_image2_1.jpg"
+    }
+     ] ,
+    "http://data.visitkorea.or.kr/property/babyEquipmentRental" : [ { 
+      "type" : "literal" ,
+      "value" : "불가능"
+    }
+     ] ,
+    "http://data.visitkorea.or.kr/property/parking" : [ { 
+      "type" : "literal" ,
+      "value" : "주차 가능"
+    }
+     ]
+  }
+}
