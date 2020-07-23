@@ -5,7 +5,7 @@ from maps.models import Spot
 class Show(models.Model):
     show_name = models.CharField(max_length=500)
     show_img = models.CharField(max_length=500)      
-    
+
 class Showman(models.Model):
     showman_name = models.CharField(max_length=500)
     showman_img = models.CharField(max_length=500)

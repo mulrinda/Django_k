@@ -14,3 +14,4 @@ class Singer(models.Model):
     singer_likenum = models.IntegerField()
     group_cd = models.ForeignKey(Group, on_delete=models.CASCADE, null=True)
     spot_cd = models.ManyToManyField(Spot, related_name='spot_singer', null=True)
+
