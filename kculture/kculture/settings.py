@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'singers',
     'themecourses',
     'bootstrap4',
+    'import_export',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
