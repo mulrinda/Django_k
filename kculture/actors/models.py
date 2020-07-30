@@ -10,6 +10,6 @@ class Drama(models.Model):
 class Actor(models.Model):
     actor_name = models.CharField(max_length=500)
     actor_img = models.CharField(max_length=500)
-    actor_likenum = models.IntegerField()
+    actor_likenum = models.IntegerField(default=0)
     drama_cd = models.ForeignKey(Drama, on_delete=models.CASCADE, null=True)
     spot_cd = models.ManyToManyField(Spot, related_name='spot_actor', null=True)
