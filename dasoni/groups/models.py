@@ -5,6 +5,7 @@ from maps.models import Spot
 class Drama(models.Model):
     drama_name = models.CharField(max_length=500)
     drama_img = models.CharField(max_length=500)   
+    drama_kind = models.CharField(max_length=500)  
 
 class Actor(models.Model):
     actor_name = models.CharField(max_length=500)
