@@ -8,3 +8,7 @@ def index(request):
 #         "text" : result[0].text
 #     }
     return render(request, 'maps/index.html', context=context)
+
+
+def theme(request):
+    return render(request, 'maps/theme.html')
