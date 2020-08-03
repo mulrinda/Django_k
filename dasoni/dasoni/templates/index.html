@@ -1,23 +1,10 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css'%}">
 {% block style %}
 <style>
-@media all and (min-width:320px){
-body{
-background:black;    
-}
-}
-@media all and (min-width:768px){
-body{
-background:red;
-}
-}
-@media all and (min-width:960px){
-body{
-background:blue;
-}
-}
+
 </style>
 {% endblock  %}
 {% block body %}
