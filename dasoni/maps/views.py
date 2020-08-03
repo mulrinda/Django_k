@@ -7,4 +7,4 @@ def index(request):
 #     context = {
 #         "text" : result[0].text
 #     }
-    return render(request, 'maps/index.html', context=context)
+    return render(request, 'maps/index.html')
