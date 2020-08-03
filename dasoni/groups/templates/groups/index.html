@@ -1,33 +1,50 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load static %}
-<<<<<<< HEAD
-{% block style %}
-<link rel="stylesheet" href="{% static 'css/main.css'%}">
-<style>
-@media all and (min-width:320px){
-body{
-background:black;    
-}
-}
-@media all and (min-width:768px){
-body{
-background:red;
-}
-}
-@media all and (min-width:960px){
-body{
-background:blue;
-}
-}
-=======
 <link rel="stylesheet" href="{% static 'css/main.css'%}">
 {% block style %}
 <style>
-
->>>>>>> 9e8d2aaae176928f0a309168fe71628c897ff313
 </style>
 {% endblock  %}
-{% block body %}
+{% block header  %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img class="navbar-brand" src="{% static "dasoni/img/main_bg.png" %}" alt="">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+{% endblock  %}
+{% block content %}
+
 <h1>hello</h1>
 {% endblock  %}

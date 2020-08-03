@@ -1,19 +1,21 @@
 @media all and (min-width:320px){
-    body{
-<<<<<<< HEAD
-    background:white; 
-=======
-    background:black;    
->>>>>>> 9e8d2aaae176928f0a309168fe71628c897ff313
+body{
+background:black;    
+}
+
+
+
     }
-    }
-@media all and (min-width:768px){
+    @media all and (min-width:768px){
     body{
     background:red;
-    }
+}
 }
 @media all and (min-width:960px){
     body{
     background:blue;
     }
+}
+.logo {
+    width: 10px;
 }
