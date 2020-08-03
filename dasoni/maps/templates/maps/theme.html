@@ -3,134 +3,248 @@
 {% load static %}
 {% block style %}
 <style>
+    {% comment %} .career-timeline {
+            display: -webkit-flex;
+            display: flex;
+            height: 100vh;
+            white-space: nowrap;
+            background: #456990;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+    }
+    .career-timeline h1 {
+            color: #f4f3ea;
+            margin: 30px;
+    }
+    .career-timeline ol {
+            -webkit-flex: 1;
+            flex: 1;
+            font-size: 0;
+            width: 100vw;
+            padding: 10% 0;
+            transition: all 1s;
+    }
+    .career-timeline ol li {
+            position: relative;
+            display: inline-block;
+            list-style-type: none;
+            width: 160px;
+            height: 3px;
+            background: #fff;
+            z-index:-1;
+    }
+    .career-timeline ol li:last-child {
+        width: 280px;
+    }
+    .career-timeline ol li:not(:first-child) {
+        margin-left: 14px;
+    }
+    .career-timeline ol li:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 40px);
+        bottom: 0;
+        width: 12px;
+        height: 12px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background: #F45B69;
+    }
+    .career-timeline ol li div {
+        position: absolute;
+        left: calc(100% + 7px);
+        width: 150px;
+        padding: 15px;
+        font-size: 1rem;
+        white-space: normal;
+        color: black;
+        background: white;
+    }
+
+    .career-timeline ol li div::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    .career-timeline ol li:nth-child(odd) div {
+        top: -16px;
+        transform: translateY(-100%);
+    }
+
+    .career-timeline ol li:nth-child(odd) div::before {
+        top: 100%;
+        border-width: 8px 8px 0 0;
+        border-color: white transparent transparent transparent;
+    }
+
+    .career-timeline ol li:nth-child(even) div {
+        top: calc(100% + 16px);
+    }
+
+    .career-timeline ol li:nth-child(even) div::before {
+        top: -8px;
+        border-width: 8px 0 0 8px;
+        border-color: transparent transparent transparent white;
+    }
+
+    .career-timeline time {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+    } {% endcomment %}
+@media all and (min-width:320px){
+
+}
+
 </style>
 {% endblock style %}
 
-{% block content %}
-<h1>theme main</h1>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      1 of 2
-    </div>
-    <div class="col">
-      2 of 2
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      1 of 3
-    </div>
-    <div class="col">
-      2 of 3
-    </div>
-    <div class="col">
-      3 of 3
-    </div>
-  </div>
-</div>
+{% block content%}
 <!-- Main -->
-<div id="container">
+<h1>테마투어 메인 :)</h1>
+{% comment %} <br>
+<div class="career-timeline">
+    <ol>
+        <li>
+            <div>
+                <time>장소1</time>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>장소2</time>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>장소3</time>    
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>장소4</time>
+            </div>
+        </li>
+          <li>
+            <div>
+                <time>장소5</time>
+            </div>
+        </li>
+        <li>
+        </li>
+    </ol>
+</div>
+ {% endcomment %}
+
+
+<br>
+<div id="container" style="padding-left: 8%;">
     <div class="row">
-        <div class="col-4">
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic01.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic01.jpg' %}" alt="" width="80%"/>
             </span>
-            <a href="generic.html">
+            <a href="{% url 'tothers:theme' theme.id %}">
                 <h2>Magna</h2>
             </a>
         </div>
-        <div class="col-4">
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic02.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic02.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Lorem</h2>
             </a>
         </div>
-        <div class="col-4">
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic03.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic03.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Feugiat</h2>
             </a>
         </div>
-    </div>
-</div>    
-        {% comment %} <div>
-        <div class="style4">
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic04.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic04.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Tempus</h2>
             </a>
         </div>
-        <div class="style5">
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic05.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic05.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Aliquam</h2>
             </a>
         </div>
-        <article class="style6">
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic06.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic06.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Veroeros</h2>
             </a>
-        </article>
-        <article class="style2">
+        </div> 
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic07.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic07.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Ipsum</h2>
             </a>
-        </article>
-        <article class="style3">
+        </div>
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic08.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic08.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Dolor</h2>
             </a>
-        </article>
-        <article class="style1">
+        </div>
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic09.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic09.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Nullam</h2>
             </a>
-        </article>
-        <article class="style5">
+        </div>
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic10.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic10.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Ultricies</h2>
             </a>
-        </article>
-        <article class="style6">
+        </div>
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic11.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic11.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Dictum</h2>
             </a>
-        </article>
-        <article class="style4">
+        </div>
+        <div class="theme_tile col-6">
             <span class="image">
-                <img src="{% static 'images/pic12.jpg' %}" alt="" />
+                <img src="{% static 'images/theme/pic12.jpg' %}" alt="" width="80%"/>
             </span>
             <a href="generic.html">
                 <h2>Pretium</h2>
             </a>
-        </article>
+        </div>
     </div>
-</div> {% endcomment %}
+</div> 
 {% endblock content %}

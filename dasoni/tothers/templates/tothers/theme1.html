@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block style %}
+<style>
+#section{
+    margin-bottom:20%;
+}
+h5{
+    padding-left:10%;
+}
+</style>
+{% endblock style %}
+{% block content %}
+
+<div id="main_img">
+    <img src="{% static 'images/theme/btsk.png' %}" alt="" style="width:100%; text-align:center;" />
+    <br>
+    <img src="{% static 'images/theme/bts_path.png' %}" alt="bts_path" style="width:100%; text-align:center;" />
+</div>
+<br>
+<h5># 양주 일영역</h5>
+<div id="section" style="text-align:center; margin-bottom:20%;">
+    <img src="{% static 'images/theme/bts_theme1.png' %}" alt="" style="width:80%;" /> 
+</div>
+<h5># 춘천 강촌역</h5>
+<div id="section" style="text-align:center; margin-bottom:20%;">
+    <img src="{% static 'images/theme/bts_theme2.png' %}" alt="" style="width:80%;" >
+</div>
+<h5># 강릉 향호해변정류장</h5>
+<div id="section" style="text-align:center; margin-bottom:20%;">
+    <img src="{% static 'images/theme/bts_theme3.jpeg' %}" alt="" style="width:80%;" >
+</div>
+{% endblock content %}
+
+
+
