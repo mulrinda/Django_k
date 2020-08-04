@@ -10,14 +10,21 @@
         navigator.geolocation.getCurrentPosition(position =>{
             latitude = position.coords.latitude;
             longitude = position.coords.longitude;
-        
+
             //console.log(`${latitude}`);
             fetch(
                 `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0d98d57b7d9f3de1f8d23d65feaa32a2&units=metric`
             ).then(response => {
                 return response.json();
             }).then(json => {
-                document.getElementById('demo').innerHTML = Math.round(json.main.temp);
+                var temp = Math.round(json.main.temp);
+                var icon = json.main.weather[0].icon;
+                console.log(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0d98d57b7d9f3de1f8d23d65feaa32a2&units=metric`);
+                var src;
+                document.getElementById('demo').innerHTML = temp + '<img src="'+icon+'">';
+                if(temp<0){
+                }
+
                 //console.log(json.main.temp);
             })
         })
