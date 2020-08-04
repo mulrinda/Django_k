@@ -10,55 +10,17 @@
         navigator.geolocation.getCurrentPosition(position =>{
             latitude = position.coords.latitude;
             longitude = position.coords.longitude;
+        
+            //console.log(`${latitude}`);
+            fetch(
+                `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0d98d57b7d9f3de1f8d23d65feaa32a2&units=metric`
+            ).then(response => {
+                return response.json();
+            }).then(json => {
+                document.getElementById('demo').innerHTML = Math.round(json.main.temp);
+                //console.log(json.main.temp);
+            })
         })
-
-        fetch(
-            'https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0d98d57b7d9f3de1f8d23d65feaa32a2&units=metric'
-        ).then(response => {
-            return response.json();
-        }).then(json => {
-            console.log(json.main.temp);
-        })
-
-
-
-
-        // var x = document.getElementById("demo");
-        // var content;
-        // var xhr = new XMLHttpRequest();
-        // $(window).load(function(){
-        //     if (navigator.geolocation) {
-        //         navigator.geolocation.watchPosition(showPosition);
-        //     } else { 
-        //         x.innerHTML = "Geolocation is not supported by this browser.";
-        //     }
-        //     var queryParams='';
-                
-        //     function showPosition(position) {
-        //         console.log("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
-        //         // var latitude = position.coords.latitude;
-        //         // var longitude = position.coords.longitude;
-        //         // fetch(
-        //         //     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0d98d57b7d9f3de1f8d23d65feaa32a2&units=metric`
-        //         // ).then(function(response){ //network 정보 => json으로 변경
-        //         //     return response.json();
-        //         // })
-        //         queryParams = 'lat='+position.coords.latitude;
-        //         queryParams += '&lon='+position.coords.longitude;
-        //         queryParams += '&exclude=current';
-        //         queryParams += '&appid=0d98d57b7d9f3de1f8d23d65feaa32a2&units=metric';
-        //     }
-            
-        //     var url = 'https://api.openweathermap.org/data/2.5/onecall?';
-        //     xhr.open('GET', url+queryParams);
-        //     console.log(url+queryParams);
-        //     xhr.onreadystatechange = function () {
-        //         console.log(readyState);
-        //         if (readyState == 4) {
-        //             alert('실패');
-        //         }
-        //     };
-        // })
         
     </script>
 
