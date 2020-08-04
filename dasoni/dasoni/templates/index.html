@@ -108,7 +108,7 @@
 <div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo4.png" %}" width="50%">
 <p class="mainicontext">투어 예약</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo5.png" %}" width="50%">
+<div onClick="location.href ='{% url 'tothers:tourtip' %}'"><img src="{% static "img/mainlogo5.png" %}" width="50%">
 <p class="mainicontext">투어 팁</p>
 </div>
 <div onClick="location.href ='{% url 'tothers:goods' %}'"><img src="{% static "img/mainlogo6.png" %}" width="50%">

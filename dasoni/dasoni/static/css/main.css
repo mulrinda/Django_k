@@ -65,14 +65,32 @@ font-weight: bold;
     color: red; 
 }
 
+.tip{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row;
+    padding-top: 2%;
+    padding-bottom:2%;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.tip div{
+    width:30%;
+}
+
+.fa-home{
+    width:100px;
+}
+
 }
 @media all and (min-width:768px){
 body{
-background:red;
+background:white;
 }
 }
 @media all and (min-width:960px){
 body{
-background:blue;
+background:white;
 }
 }
