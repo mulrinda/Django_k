@@ -42,6 +42,29 @@ padding-top:5%;
 font-size: 100%;
 font-weight: bold;  
 }
+.goods{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row;
+    padding-top: 5%;
+    padding-bottom:5%;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+.goods div{
+    width:45%;
+}
+
+.goodsboxtext{
+    font-size: 80%;
+
+}
+
+.goodsprice{   
+    color: red; 
+}
+
 }
 @media all and (min-width:768px){
 body{
