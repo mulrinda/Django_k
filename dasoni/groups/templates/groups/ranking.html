@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bootstrap4 %}
+<link rel="stylesheet" href="{% static 'css/main.css'%}">
 {% block style %}
     <style>
+        .navbar-brand.logo{
+            margin-left: 10rem;
+        }
+        p{ 
+            margin-top: 1rem;
+            font-weight: bold;
+        }
         ul { list-style: none; }
         a { text-decoration: none; color: black;}
         body {
         font-family: 'Dosis', sans-serif;
         background: white;
-        }
+        }   
         #dasoni-rapper { /*햄버거 상자*/
             overflow: hidden;
             float: right;
@@ -98,6 +107,20 @@
             text-transform: uppercase;
             border-top: 1px solid #dbdcd2;
         }
+         #dasoni-basket .dasoni-list li.accordion-toggle1, #dasoni-basket .dasoni-list .menu-login {/*다소니 */
+            font-size: 20px;
+            background: #003366;
+
+            padding: 20px;
+            text-transform: uppercase;
+            border-top: 1px solid #dbdcd2;
+        }
+         #dasoni-basket .dasoni-list li.accordion-toggle2, #dasoni-basket .dasoni-list .menu-login {/*마이페이지 */
+            font-size: 16px;
+            padding: 20px;
+            text-transform: uppercase;
+            border-top: 1px solid #dbdcd2;
+        }
         #dasoni-basket .dasoni-list li:first-of-type {
             border-top: 0;
         }
@@ -139,7 +162,7 @@
         }
 
         .accordion-toggle.active-tab {
-        background: yellowgreen;
+        background: #ff6666;
         transition: all 0.3s ease;
         }
         .accordion-toggle a.active:before {
@@ -157,56 +180,64 @@
             opacity: 0;
         }
     </style>
-{% endblock %}
-
-
-{% block header %}
-     <!-- 테스트 인덱스  -->
-     
+{% endblock  %}
+<!--20200803 eunha header 로그인-->
+{% block header  %}
+ <!-- 헤더(로고와NAV) -->
         <div id="dasoni-basket">
-        <img class="navbar-brand logo" src="{% static "img/logo.png" %}" width="20%" alt="">
+            <img class="navbar-brand logo" src="{% static "img/logo.png" %}" width="20%" alt="">
             <div id="dasoni-rapper">
                 <div id="dasoniham-menu"><span></span><span></span><span></span></div>
                 <!-- dasoniham-menu -->
             </div>
-            <!-- dasoni-rapper -->
-            
+            <!-- dasoni-rapper 메뉴바-->
             <ul class="dasoni-list accordion">
-                {% if user.is_authenticated %} 
-                <li id="nav1" class="toggle accordion-toggle"> 
-                    <span class="icon-plus"></span>
-                    <form action="{% url 'accounts:logout' %}" method="POST" id="logout">
-                        {% csrf_token %}
-                        <!--<input class="menu-link" type="submit" value="로그아웃">로그아웃</input>-->
-                        <a href="#" onclick="document.getElementById('logout').submit()">로그아웃</a>
-                    </form>
-                </li>   
-                <ul class="menu-submenu accordion-content">
-                    <li><a class="head" href="#">Submenu1</a></li>)
-                    <li><a class="head" href="#">Submenu2</a></li>
-                    <li><a class="head" href="#">Submenu3</a></li>
-                </ul> 
-                {% else %}
-                <li id="nav2" class="toggle accordion-toggle"> 
-                    <span class="icon-plus"></span>
-                    <a class="menu-link" href="{% url 'accounts:login' %}">로그인</a>
-                </li>
+                {% if user.is_authenticated %}  
+                    <li id="nav0" class="toggle accordion-toggle1"> 
+                        <span class="icon-plus"></span>
+                        <a class="menu-link" style="color:white">{{ user.name_kr }}님 반갑습니다!</a>
+                    </li> 
+                    <li id="nav1" class="toggle accordion-toggle"> 
+                        <span class="icon-plus"></span>
+                        <a class="menu-link" href="#">MY PAGE</a>
+                    </li>   
+                    <ul class="menu-submenu accordion-content">
+                        <li><a class="head" href="#">프로필 관리</a></li>
+                        <li><a class="head" href="#">장바구니</a></li>
+                        <li><a class="head" href="#">여행기록</a></li>
+                    </ul> 
+                    
+                    <li id="nav1" class="toggle accordion-toggle"> 
+                        <span class="icon-plus"></span>
+                        <a class="menu-link" href="#">다소니</a>
+                    </li>   
+                    <ul class="menu-submenu accordion-content">
+                        <li><a class="head" href="#">ABOUT 다소니</a></li>
+                        <li><a class="head" href="#">고객센터</a></li>
+                    </ul> 
                 
+                    <li id="nav0" class="toggle accordion-toggle2"> 
+                        <span class="icon-plus"></span>
+                        <form action="{% url 'accounts:logout' %}" method="POST" id="logout">
+                        {% csrf_token %}
+                        <a href="#" onclick="document.getElementById('logout').submit()">로그아웃</a>
+                        </form>
+                    </li>
+                {% else %}
+                    <li id="nav0" class="toggle accordion-toggle1"> 
+                        <span class="icon-plus"></span>
+                        <a class="menu-link" href="{% url 'accounts:login' %}" style="color:white">로그인을 해주세요!</a>
+                    </li> 
+                    
+                    <li id="nav1" class="toggle accordion-toggle"> 
+                        <span class="icon-plus"></span>
+                        <a class="menu-link" href="#">다소니</a>
+                    </li>   
                     <ul class="menu-submenu accordion-content">
-                        <li><a class="head" href="#">Submenu1</a></li>
-                        <li><a class="head" href="#">Submenu2</a></li>
-                    </ul>
-                {% endif %}    
-                <li id="nav3" class="toggle accordion-toggle"> 
-                    <span class="icon-plus"></span>
-                    <a class="menu-link" href="#">Menu3</a>
-                </li>
-                    <ul class="menu-submenu accordion-content">
-                        <li><a class="head" href="#">Submenu1</a></li>
-                        <li><a class="head" href="#">Submenu2</a></li>
-                        <li><a class="head" href="#">Submenu3</a></li>
-                        <li><a class="head" href="#">Submenu4</a></li>
-                    </ul>
+                        <li><a class="head" href="#">ABOUT 다소니</a></li>
+                        <li><a class="head" href="#">고객센터</a></li>
+                    </ul> 
+                {% endif %}   
             </ul>
             <!-- dasoni-list accordion-->
         </div>
@@ -240,3 +271,9 @@
         }); // jQuery load
     </script>
 {% endblock %}
+<!--20200806 eunha ranking-->    
+{% block content %}
+<!--스팟랭킹-->
+
+
+{% endblock  %}
