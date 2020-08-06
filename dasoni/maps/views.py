@@ -13,5 +13,9 @@ def index(request):
     return render(request,'maps/index.html')
 
 
+def rankingtest(request):
+    return render(request, 'maps/rankingtest.html')
+
+
 def weather(request):
     return render(request,'maps/weather.html')

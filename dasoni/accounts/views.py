@@ -11,7 +11,7 @@ from django.contrib.auth import logout as auth_logout
 @require_http_methods(['GET','POST'])
 def signup(request):
     if request.user.is_authenticated:
-        return redirect('')
+        return redirect('index')
         
     if request.method=='POST':
         form = CustomUserCreationForm(request.POST)
@@ -21,7 +21,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             auth_login(request, user)
-            return redirect('index.html')
+            return redirect('index')
     else:
         form = CustomUserCreationForm()
 
@@ -34,31 +34,29 @@ def signup(request):
 @require_http_methods(['GET','POST'])
 def login(request):
     if request.user.is_authenticated:
-        return redirect('')
+        return redirect('index')
 
     if request.method == 'POST':
         form = AuthenticationForm(request, request.POST)
         if form.is_valid():
             user = form.get_user()
             auth_login(request, user)
-            return redirect('')
+            return redirect('index')
         
     else:
         form = AuthenticationForm()
     context = {
         'form': form
     }
-    return render(request, 'accounts/signup.html', context)
+    return render(request, 'accounts/login.html', context)
 
-
-def test1(request):
+@require_http_methods(['POST',])
+def logout(request):
+    auth_logout(request)
     return redirect('index')
-    
-# @require_http_methods(['POST',])
-# def logout(request):
-#     auth_logout(request)
-#     return redirect('')
 
+# def index(request):
+#     return render(request, 'accounts/index.html')
 
 # @login_required
 # def update(request):
