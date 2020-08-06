@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def goods(request):
+    return render(request,'tothers/goods.html')
+
+def tourtip(request):
+    return render(request,'tothers/tourtip.html')

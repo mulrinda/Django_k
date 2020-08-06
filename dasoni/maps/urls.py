@@ -5,5 +5,6 @@ app_name = 'maps'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('rankingtest', views.rankingtest, name='rankingtest'),
+    path('translate/', views.translate, name='translate'),
+    path('weather/', views.weather, name='weather'),
 ]
