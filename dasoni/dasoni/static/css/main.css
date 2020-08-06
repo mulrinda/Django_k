@@ -64,23 +64,17 @@ font-weight: bold;
 .goodsprice{   
     color: red; 
 }
+.cardflex{
 
-.tip{
-    display:flex;
-    justify-content:space-around;
-    flex-direction:row;
-    padding-top: 2%;
-    padding-bottom:2%;
-    padding-left:5%;
-    padding-right:5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
-.tip div{
-    width:30%;
-}
-
-.fa-home{
-    width:100px;
+.cardtip{
+    border-radius: 15px;      
+    width: 350px;
+    height: 350px;
+    background-size: 100% 100%;
 }
 
 }
