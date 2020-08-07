@@ -44,39 +44,34 @@
 {% endblock  %}
 
 {% block content %}
-<br>
-<h5 class="text-center font-weight-bold">여행 꿀팁</h5><br>
-<div class="tip">
-    <div class="card">
-    <img src="{% static "img/tip1.png" %}" width="100%" height="100%">       
-    </div>
-    <div class="card">
-    <img src="{% static "img/tip2.png" %}" width="100%" height="100%">       
-    </div>
-    <div class="card">
-    <img src="{% static "img/tip3.png" %}" width="100%" height="100%">       
-    </div>
+<div class="cardflex">
+  <div class="cardtip" style="background-image:url({% static "img/tip1.jpg" %})">
+  <div class="cardtext">
+  <h4>한국에서<br>
+  배달음식 시켜먹으려면?</h4>
+  <h6>여행 꿀팁 배달음식편</h6>
+  </div>
+  </div>
 </div>
 
-<div class="tip">
-    <div class="card">
-    <img src="{% static "img/tip4.png" %}" width="100%" height="100%">       
-    </div>
-    <div class="card">
-    <img src="{% static "img/tip5.png" %}" width="100%" height="100%">       
-    </div>
-    <div class="card">
-    <img src="{% static "img/tip6.png" %}" width="100%" height="100%">       
-    </div>
+<div class="cardflex">
+  <div class="cardtip" style="background-image:url({% static "img/tip2.jpg" %})">
+  <div class="cardtext">
+  <h4>한국의<br> 맛을 찾아서 !!</h4>
+  <h6>여행 꿀팁 한국음식편</h6>
+  </div>
+  </div>
 </div>
 
-
-    <div class="card">
-    <img src="{% static "img/tip7.png" %}" width="100%" height="100%">       
-    </div>
-
-<i class="fas fa-home"></i>
-
+<div class="cardflex">
+  <div class="cardtip" style="background-image:url({% static "img/tip3.jpg" %})">
+  <div class="cardtext">
+  <h4>한국 여행 할 때<br>
+  꼭 알아야 할 한국어 회화</h4>
+  <h6>여행 꿀팁 한국어</h6>
+  </div>
+  </div>
+</div>
 {% endblock  %}
 {% block footer %}
 <div class="footer text-center">

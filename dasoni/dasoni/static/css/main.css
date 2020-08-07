@@ -1,5 +1,10 @@
 @media all and (min-width:320px){
 
+@font-face { font-family: 'MapoPeacefull'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff'); font-weight: normal; font-style: normal; }    
+
+body{
+    font-family: 'MapoPeacefull'; 
+}
 .carousel-content { 
 position: absolute; 
 bottom: 10%;  
@@ -57,30 +62,29 @@ font-weight: bold;
 }
 
 .goodsboxtext{
-    font-size: 80%;
+    font-size: 0%;
 
 }
 
 .goodsprice{   
     color: red; 
 }
-
-.tip{
-    display:flex;
-    justify-content:space-around;
-    flex-direction:row;
-    padding-top: 2%;
-    padding-bottom:2%;
-    padding-left:5%;
-    padding-right:5%;
+.cardflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top:4%;
+    padding-bottom: 4%;
 }
-
-.tip div{
-    width:30%;
+.cardtip{
+    border-radius: 15px;      
+    width: 75%;
+    height: 330px;
+    background-size: 100% 100%;
 }
-
-.fa-home{
-    width:100px;
+.cardtext{
+    padding: 10%;
+    padding-top:7%;
 }
 
 }
