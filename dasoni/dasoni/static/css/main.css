@@ -62,7 +62,7 @@ font-weight: bold;
 }
 
 .goodsboxtext{
-    font-size: 0%;
+    font-size: 70%;
 
 }
 
@@ -87,6 +87,36 @@ font-weight: bold;
     padding-top:7%;
 }
 
+.stamplogo{
+    margin-right: 0px;
+}
+.stamp{
+    margin:6%;
+}
+.stamptext{
+    margin-right:10%;
+}
+.stamp1{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    background-color: rgb(175, 219, 211);
+}
+.stamp1text{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+}
+.stampmain{
+    display:flex;
+    justify-content: center;
+}
+
+.stampback{   
+    width: 90%;
+    height: 500px;
+    background-size: 100% 100%;
 }
 @media all and (min-width:768px){
 body{

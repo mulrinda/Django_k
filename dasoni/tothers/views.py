@@ -5,3 +5,6 @@ def goods(request):
 
 def tourtip(request):
     return render(request,'tothers/tourtip.html')
+
+def stamp(request):
+    return render(request,'tothers/stamp.html')
