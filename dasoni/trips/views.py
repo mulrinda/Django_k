@@ -27,3 +27,7 @@ def create(request):
         'form': form
     }
     return render(request, 'trips/share_create.html', context)
+
+
+def dasonitour(request):
+    return render(request,'trips/dasonitour.html')
