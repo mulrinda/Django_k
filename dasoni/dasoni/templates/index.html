@@ -281,32 +281,37 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
         <img src="{% static "img/mainc1.png" %}" class="d-block w-100" >
-        <div class="carousel-caption"> 
-        <h3>What we Do</h3> 
+        <div class="carousel-caption caro"style="bottom: 3px; font-weight: 1000; color: black;">
+        <h6 class="text-right"># 한국영화의 새역사 &nbsp;&nbsp;</h6>
+        <h4><span style="color:purple;">'기생충'</span>뒤에 <span style="color:#ff9900;">서울</span>이 있었다.</h4>
         </div>
     </div>
     <div class="carousel-item">
         <img src="{% static "img/mainc1.png" %}" class="d-block w-100" >
-        <div class="carousel-caption"> 
-        <h3>What we Do</h3> 
+        <div class="carousel-caption caro"style="bottom: 3px; font-weight: 1000; color: black;">
+        <h6 class="text-right"># 한국영화의 새역사 &nbsp;&nbsp;</h6>
+        <h4><span style="color:purple;">'기생충'</span>뒤에 <span style="color:#ff9900;">서울</span>이 있었다.</h4>
         </div>
     </div>
     <div class="carousel-item">
       <img src="{% static "img/mainc1.png" %}" class="d-block w-100" >
-      <div class="carousel-caption"> 
-        <h3>What we Do</h3> 
+        <div class="carousel-caption caro"style="bottom: 3px; font-weight: 1000; color: black;">
+        <h6 class="text-right"># 한국영화의 새역사 &nbsp;&nbsp;</h6>
+        <h4><span style="color:purple;">'기생충'</span>뒤에 <span style="color:#ff9900;">서울</span>이 있었다.</h4>
         </div>
     </div>
   <div class="carousel-item">
       <img src="{% static "img/mainc1.png" %}" class="d-block w-100" >
-      <div class="carousel-caption"> 
-        <h3>What we Do</h3> 
+        <div class="carousel-caption caro"style="bottom: 3px; font-weight: 1000; color: black;">
+        <h6 class="text-right"># 한국영화의 새역사 &nbsp;&nbsp;</h6>
+        <h4><span style="color:purple;">'기생충'</span>뒤에 <span style="color:#ff9900;">서울</span>이 있었다.</h4>
         </div>
     </div>
   <div class="carousel-item">
       <img src="{% static "img/mainc1.png" %}" class="d-block w-100" >
-      <div class="carousel-caption"> 
-        <h3>What we Do</h3> 
+        <div class="carousel-caption caro"style="bottom: 3px; font-weight: 1000; color: black;">
+        <h6 class="text-right"># 한국영화의 새역사 &nbsp;&nbsp;</h6>
+        <h4><span style="color:purple;">'기생충'</span>뒤에 <span style="color:#ff9900;">서울</span>이 있었다.</h4>
         </div>
     </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -319,38 +324,67 @@
   </a>
 </div>
 <!--20200803 희정 캐러셀 끝-->
+<!--20200810 날씨, 번역 기능 시작-->
+<div class="weather">
+    <div class="row text-center weatherrow">
+    <div class="col" style="padding-left: 0px;">[날씨]</div>
+    <div class="col">[기온별 옷차림]</div>
+    <div class="col" style="padding-right: 0px;">[번역]</div>
+    </div>
+    <div class="mainweather text-center">
+    <div><img src="{% static "img/맑음.png" %}" width="50%">
+    <br>27도 맑음
+    </div>
+    <div><img src="{% static "img/나시티.png" %}" width="50%">
+    <br>나시티
+    </div>
+    <div><img src="{% static "img/반팔.png" %}" width="50%">
+    <br>반팔
+    </div>
+    <div><img src="{% static "img/반바지.png" %}" width="50%">
+    <br>반바지
+    </div>
+    <div><img src="{% static "img/원피스.png" %}" width="50%">
+    <br>원피스
+    </div>
+    <div><img src="{% static "img/trans.png" %}" width="50%"></div>
+    </div>
+</div>
+<!--20200810 날씨, 번역 기능 끝-->
+
+
 <div class="mainicon text-center">
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo1.png" %}" width="50%">
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo1.png" %}" width="45%">
 <p class="mainicontext">가수</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo2.png" %}" width="50%">
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo2.png" %}" width="45%">
 <p class="mainicontext">드라마/영화</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo3.png" %}" width="50%">
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo3.png" %}" width="45%">
 <p class="mainicontext">예능</p>
 </div>
 </div>
 
 <div class="mainicon text-center">
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo4.png" %}" width="50%">
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo4.png" %}" width="45%">
 <p class="mainicontext">투어 예약</p>
 </div>
-<div onClick="location.href ='{% url 'tothers:tourtip' %}'"><img src="{% static "img/mainlogo5.png" %}" width="50%">
+<div onClick="location.href ='{% url 'tothers:tourtip' %}'"><img src="{% static "img/mainlogo5.png" %}" width="45%">
 <p class="mainicontext">투어 팁</p>
 </div>
-<div onClick="location.href ='{% url 'tothers:goods' %}'"><img src="{% static "img/mainlogo6.png" %}" width="50%">
+<div onClick="location.href ='{% url 'tothers:goods' %}'"><img src="{% static "img/mainlogo6.png" %}" width="45%">
 <p class="mainicontext">굿즈</p>
 </div>
 </div>
 
 <div class="mainicon text-center">
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo7.png" %}" width="50%">
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo7.png" %}" width="45%">
 <p class="mainicontext">회사 소개</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo8.png" %}" width="50%">
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo8.png" %}" width="45%">
 <p class="mainicontext">스팟 랭킹</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo9.png" %}" width="50%">
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo9.png" %}" width="45%">
 <p class="mainicontext">여행 공유</p>
 </div>
 </div>
