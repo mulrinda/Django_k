@@ -97,11 +97,9 @@ font-weight: bold;
     margin-right:10%;
 }
 .stamp1{
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    background-color: rgb(175, 219, 211);
+    margin-left: 8%;
+    margin-right: 8%;
+
 }
 .stamp1text{
     font-size: 0.8rem;
@@ -114,9 +112,29 @@ font-weight: bold;
 }
 
 .stampback{   
-    width: 90%;
-    height: 500px;
+    width: 95%;
+    height: 650px;
     background-size: 100% 100%;
+}
+
+.stamptop{
+    margin-top:8%;
+    margin-bottom:8%;
+    font-weight:bold;
+}
+.stamphead{
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+.stamp2text{
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.coltext{
+    padding-left: 0px;
+    padding-right: 0px; 
 }
 @media all and (min-width:768px){
 body{
