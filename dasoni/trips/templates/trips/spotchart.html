@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block style %}
+<style>
+
+.card-img{
+    width: 50px;
+    margin-top: 1rem;
+    margin-left: .5rem;
+}
+.stamp-img{
+    width: 40px;
+    margin-top: 2.3rem;
+    margin-left: 1rem;
+}
+.card-t{
+    margin-top: 1rem;
+    margin-botton: 0rem;
+}
+</style>
+
+{% endblock  %}
+{% block header %}
+{% endblock  %}
+{% block content %}
+<div class="row no-gutters">
+    <div class="col-4">
+    <img src="{% static 'img_spot/1.png' %}" class="card-img" style="width:100px;">
+    </div>
+    <div class="col-4">
+    <img src="{% static 'img_spot/2.png' %}" class="card-img" style="width:100px;">
+    </div>
+    <div class="col-4">
+    <img src="{% static 'img_spot/3.png' %}" class="card-img" style="width:100px;">
+    </div>
+</div>
+
+<div class="card " style="max-width: 100%; margin-top: 1rem;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/ntower.png' %}" class="card-img" style="width:60px;">
+    </div>
+    <div class="col-8" >
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: red; margin-left: .4rem;">1위</span> 'BTS' N서울타워</h6>
+        <p class="card-text">
+            <div class="progress" style="margin-left: .3rem;">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 95%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%; "><span style="text-align: right; margin-right: .5rem;">10,823,234표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/kbpalavce.png' %}" class="card-img" style="width:60px;">
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: green; margin-left: .4rem;">2위</span> '무한도전' 경복궁</h6>
+        <p class="card-text">
+            <div class="progress" style="margin-left: .4rem;">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 88%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">5,234,123표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/cdk1.png' %}" class="card-img" style="width:60px;" >
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: blue; margin-left: .4rem;">3위</span> '킹덤' 창덕궁</h6>
+        <p class="card-text">
+            <div class="progress" style="margin-left: .3rem;">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">5,012,230표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/sjimyoung.png' %}" class="card-img" >
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: black;">4위</span> '임영웅' 포천 산정호수</h6>
+        <p class="card-text">
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">4,823,563표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/skrunningman.png' %}" class="card-img" >
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: black;">5위</span> '런닝맨' 제주도 쇠소깍</h6>
+        <p class="card-text">
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">3,896,324표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/bwimyoung.png' %}" class="card-img" >
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: black;">6위</span> '임영웅' 포천 백운계곡</h6>
+        <p class="card-text">
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 65%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">3,221,190표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/gnpsy.png' %}" class="card-img" >
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: black;">7위</span> '싸이' 강남</h6>
+        <p class="card-text">
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">1,563,799표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/hsbyul.png' %}" class="card-img" >
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: black;">8위</span> '별에서온그대' 장사도해상공원</h6>
+        <p class="card-text">
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 55%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">1,443,349표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/yrihc.png' %}" class="card-img" >
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: black;">9위</span> '황치열' 제주도 여리숲</h6>
+        <p class="card-text">
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">1,323,689표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+
+<div class="card " style="max-width: 100%;" >
+  <div class="row no-gutters">
+    <div class="col-2">
+      <img src="{% static 'img_spot/hscloud.png' %}" class="card-img" >
+    </div>
+    <div class="col-8">
+      <div class="card-sp">
+        <h6 class="card-t" style="font-weight: bold"><span style="color: black;">10위</span> '구르미그린달빛' 수원 화성행궁</h6>
+        <p class="card-text">
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 70%;"><span style="text-align: right; margin-right: .5rem;">1,323,689표</span></div>
+            </div>
+        </p>   
+      </div>
+    </div>
+    <div class="col-.5"></div>
+    <div class="col-2">
+       <img src="{% static 'img_spot/stamp.png' %}" class="stamp-img" >
+    </div>
+
+  </div>
+</div>
+
+
+
+{% endblock  %}
