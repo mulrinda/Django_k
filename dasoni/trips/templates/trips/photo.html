@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+
 {% load static %}
 {% load bootstrap4 %}
+
 {% block style %}
     <link rel="stylesheet" href="{% static 'css/basecss.css'%}">
     <style>
@@ -9,12 +11,13 @@
             width:90%;
             margin-left:auto;
             margin-right:auto;
-            margin-top:8%;
-            background-image: url({% static 'img/photocard2.png' %});
-            background-size:100% 100%;
+            margin-top:3%;
+            background : no-repeat center/100% url({% static 'img/pola.png' %});
+            {% comment %} background-image: url({% static 'img/pola.png' %}); {% endcomment %}
+            background-size: 160% 130%
         }
         #photo{
-            height:62.8%;
+            height:65%;
             width:79.3%;
             margin-left:10.3%;
             margin-right:auto;
@@ -26,8 +29,8 @@
             text-align:center;
         }
         .phototext{
-            font-family:'InkLipquid';
-            font-size:1.4em;
+            font-family: 'InkLipquid';
+            font-size:1.6em;
         }
         #photoform{
             margin: 0 auto;
@@ -50,12 +53,37 @@
             padding-right:13%;
         }
         .btn-photo{
-            background-color:#F5F5F5;
+            background-color:white;
             padding-top:5%;
             padding-bottom:5%;
         }
         .photoicon{
             width:2.2em;
+        }
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            font-size: 24px;
+            line-height: 1.33;
+            border-radius: 35px;
+            text-align: center;
+          
+        }
+        .fas.fa-file-upload{
+            color: white;
+            font-size: 2rem;  
+        }
+        .fas.fa-print{
+            color: white;
+            font-size: 2rem;  
+        }
+        .far.fa-share-square{
+            color: white;
+            font-size: 2rem;  
+        }
+        #photo-bt{
+            margin-left: 6rem;
         }
     </style>
 {% endblock %}
@@ -63,11 +91,18 @@
     <div class="cardarea">
         <img src="{% static 'img/namsan2.jpg' %}" id="photo">
         <div class="inform">
-            <p class="phototext">2020.08.08 남산타워</p>
+            <p class="phototext">2020.08.08 </p>
             <p class="phototext">RM이 방문했던 장소에:-)</p>
         </div>
     </div>
-    <form action="" id="photoform">
+    <div id="photo-bt">
+    <button type="button" class="btn btn-info btn-circle btn-xl"><i class="fas fa-file-upload" title="Upload" data-toggle="tooltip" data-placement="bottom"></i></button>
+    <button type="button" class="btn btn-warning btn-circle btn-xl"><i class="fas fa-print" title="Print" data-toggle="tooltip" data-placement="bottom"></i></button>
+    <button type="button" class="btn btn-danger btn-circle btn-xl"> <i class="far fa-share-square" title="share" data-toggle="tooltip" data-placement="bottom"></i></button>
+    </div>
+
+
+    {% comment %} <form action="" id="photoform">
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-photo">
                 <!--<img src="{% static 'img/upload.png' %}" class="photoicon">-->
@@ -82,7 +117,7 @@
                 <i class="far fa-share-square" title="share" data-toggle="tooltip" data-placement="bottom"></i>
             </button>
         </div>
-    </form>
+    </form> {% endcomment %}
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -92,4 +127,5 @@
 				$('[data-toggle="tooltip"]').tooltip()
 			})
 		</script>
+        
 {% endblock %}
