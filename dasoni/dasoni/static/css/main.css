@@ -153,7 +153,7 @@ font-weight: bold;
     display:flex;
     flex-direction:row;   
     padding-left:3%;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     
 }
 
@@ -164,7 +164,7 @@ font-weight: bold;
 .weatherrow{
     padding-bottom: 1%;
     font-family: 'ImcreSoojin';
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-family: 'MapoPeacefull';
 }
 
