@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/main.css'%}">
+{% endblock  %}
+{% block header  %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img class="navbar-brand logo" src="{% static "img/logo.png" %}" width="20%" onClick="{% url 'index' %}">
+  {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+{% endblock  %}
+{% block content %}
+
+<!-- 지도를 표시할 div 입니다 -->
+
+<div id="map" style="width:80%;height:350px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12b33cfeae96129823a440f07c7b2d91&libraries=services,clusterer"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.56556387,126.9748948), // 지도의 중심좌표
+            level: 7 // 지도의 확대 레벨
+        };
+
+    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+
+    // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+    var linePath = [
+        new kakao.maps.LatLng(37.58077513, 126.9700261), //통인시장
+        new kakao.maps.LatLng(37.56556387,126.9748948), //덕수궁
+        new kakao.maps.LatLng(37.5595462317716,126.994680221224)//남산골한옥마을
+    ];
+
+// 지도에 표시할 선을 생성합니다
+    var polyline = new kakao.maps.Polyline({
+        path: linePath, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#b60039', // 선의 색깔입니다
+        strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+
+// 지도에 선을 표시합니다 
+polyline.setMap(map);  
+
+//여기서부터는 마커
+
+var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+{% comment %} var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition1 = new kakao.maps.LatLng(37.58077513, 126.9700261); // 마커가 표시될 위치입니다
+
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition2 = new kakao.maps.LatLng(37.56556387,126.9748948); // 마커가 표시될 위치입니다
+
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition3 = new kakao.maps.LatLng(37.5595462317716,126.994680221224); // 마커가 표시될 위치입니다 {% endcomment %}
+
+// 마커가 표시될 위치입니다 
+var markerPosition1  = new kakao.maps.LatLng(37.58077513, 126.9700261); 
+var markerPosition2  = new kakao.maps.LatLng(37.56556387,126.9748948); 
+var markerPosition3  = new kakao.maps.LatLng(37.5595462317716,126.994680221224); 
+
+// 마커를 생성합니다
+var marker1 = new kakao.maps.Marker({
+    position: markerPosition1,  
+});
+var marker2 = new kakao.maps.Marker({
+    position: markerPosition2,
+});
+var marker3 = new kakao.maps.Marker({
+    position: markerPosition3,  
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker1.setMap(map); 
+marker2.setMap(map); 
+marker3.setMap(map); 
+</script>
+{% endblock %}

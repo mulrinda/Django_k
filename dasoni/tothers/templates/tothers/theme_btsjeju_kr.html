@@ -1,0 +1,452 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/main.css'%}">
+<style>
+#theme-content{
+  padding:10%;
+}
+.card{
+  text-align:left;
+  background:#e5f2f9;
+}
+.information {
+    list-style: none;
+    padding-left: 0px;
+}
+</style>
+{% endblock  %}
+{% block header  %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img class="navbar-brand logo" src="{% static "img/logo.png" %}" width="20%" onClick="{% url 'index' %}">
+  {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+{% endblock  %}
+
+{% block content %}
+<div id="theme-content">
+  <div id="main_img">
+      <img src="{% static 'img/theme/jeju_k.png' %}" alt="" style="width:100%; text-align:center;" />
+      <br><br>
+      <img src="{% static 'img/theme/bts_jeju_path.png' %}" alt="bts_path" style="width:100%; text-align:center;" />
+  </div>
+  <br><br>
+ <div class="theme-content">
+    <strong><h5>&nbsp;&nbsp;# 본태박물관</h5></strong><br>
+    <div id="section" style="text-align:center; margin-bottom:10%;">
+      <img src="{% static 'img/theme/bts_jeju1.PNG' %}" alt="본태박물관" style="width:80%; height:280px;" /> 
+      <br>
+      @bts공식twitter
+      <br><br>  
+      본태 박물관은 ‘本態, 본래의 형태’의 뜻과 같이 인류본연의 아름다움을 탐구하기 위해 세계적인 건축가 안도 타다오의 설계로 지어졌으며, 미학적 관점을 넘어 주변 환경과의 조화를 고려하는 ‘건축 환경’에 대한 그의 철학이 담겨져 있습니다.<br> 뮤지엄 산에 이어 안도타다오의 건축물에 방문한 RM처럼 사진찍어보는건 어떨까요?
+      <br><br>
+      <div class="card">
+        <div class="card-body">
+        <strong style="color:navy;"> # Information </strong><br><br>
+        <ul class="information">
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/homepage.png' %}" alt="홈페이지 아이콘" />
+          </span>
+          <span><a href="http://www.bontemuseum.com">http://www.bontemuseum.com</a></span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/addr.png' %}" alt="주소 아이콘" />
+          </span>
+          <span>제주도 서귀포시 안덕면 산록남로762번길 69</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/tele.png' %}" alt="전화번호 아이콘" />
+          </span>
+          <span>064-792-8108</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/time.png' %}" alt="시간 아이콘" />
+          </span>
+          <span>이용시간: 10:00 ~ 18:00</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/calendar.png' %}" alt="휴무일 아이콘" style="width: 24px;" />
+          </span>
+          <span>쉬는날: 연중무휴</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/stroller.png' %}" alt="유모차 아이콘" style="width: 24px;" />
+          </span>
+          <span>유모차 대여 여부: 가능</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/pet.png' %}" alt="애완동물 아이콘" style="width: 24px;" />
+          </span>
+          <span>애완동물 동반 가능 여부: 불가</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/payment.png' %}" alt="신용카드 아이콘" style="width: 24px;" />
+          </span>
+          <span>신용카드 가능 여부: 가능</span>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <br><br>
+  <div class="theme-content">
+    <strong><h5>&nbsp;&nbsp;# 카멜리아힐</h5></strong><br>
+    <div id="section" style="text-align:center; margin-bottom:10%;">
+      <img src="{% static 'img/theme/bts_jeju2.PNG' %}" alt="" style="width:80%; height:280px;" /> 
+      <br>
+      @bts 공식홈페이지
+      <br><br>  
+      카멜리아힐은 세계에서 가장 큰 동백꽃을 비롯하여 가장 일찍 피는 동백꽃, 향기를 내는 동백꽃에 이르기까지 전세계 500여 종 6000여 그루의<br> 동백나무가 한데 모여 있으며, BTS 멤버 '진'의 LOVE YOUR SELF 개인포스터를 촬영한 곳이기도 합니다
+      <br><br>
+      <div class="card">
+        <div class="card-body">
+        <strong style="color:navy;"> # Information </strong><br><br>
+        <ul class="information">
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/homepage.png' %}" alt="홈페이지 아이콘" />
+          </span>
+          <span><a href="http://www.camelliahill.co.kr">http://www.camelliahill.co.kr</a></span>
+          </li>
+           <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/addr.png' %}" alt="주소 아이콘" />
+          </span>
+          <span>제주도 서귀포시 안덕면 병악로 166</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/tele.png' %}" alt="전화번호 아이콘" />
+          </span>
+          <span>064-792-0088</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/time.png' %}" alt="시간 아이콘" />
+          </span>
+          <span>동절기(12월~2월) 08:30~17:00<br>
+                간절기(3~5월,9~11월) 08:30~17:30<br>
+                하절기 (6월~8월) 08:30~18:00<br>
+                ※ 마감 1시간 전까지 입장 가능</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/calendar.png' %}" alt="휴무일 아이콘" style="width: 24px;" />
+          </span>
+          <span>쉬는날: 연중무휴</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/parking.png' %}" alt="주차 아이콘" style="width: 24px;" />
+          </span>
+          <span>주차시설: 있음</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/stroller.png' %}" alt="유모차 아이콘" style="width: 24px;" />
+          </span>
+          <span>유모차 대여 여부: 없음</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/pet.png' %}" alt="애완동물 아이콘" style="width: 24px;" />
+          </span>
+          <span>애완동물 동반 가능 여부: 불가</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/payment.png' %}" alt="신용카드 아이콘" style="width: 24px;" />
+          </span>
+          <span>신용카드 가능 여부: 가능</span>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <br><br>
+
+
+  <div class="theme-content">
+    <div class="theme-content">
+    <strong><h5>&nbsp;&nbsp;# 생각하는 정원</h5></strong><br>
+    <div id="section" style="text-align:center; margin-bottom:10%;">
+      <img src="{% static 'img/theme/bts_jeju3.jpeg' %}" alt="" style="width:80%; height:280px;" /> 
+      <br>
+      @BTS 공식 Twitter
+      <br><br>  
+      생각하는 정원은 돌투성이 황량한 불모지에 꽃피운 한 농부의 혼불이라는 점에서 세계 언론의 주목을 받고 있으며, 수백여점의 분재가 오름과 물을 모티브로 한 자연정원에 자리하고 있다. BTS 멤버 'RM'이 방문한 곳이기도 하죠?
+      <br><br>
+      <div class="card">
+        <div class="card-body">
+        <strong style="color:navy;"> # Information </strong><br><br>
+        <ul class="information">
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/homepage.png' %}" alt="홈페이지 아이콘" />
+          </span>
+          <span><a href="http://www.spiritedgarden.com">http://www.spiritedgarden.com</a></span>
+          </li>
+           <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/addr.png' %}" alt="주소 아이콘" />
+          </span>
+          <span>제주도 제주시 한경면 녹차분재로 675</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/tele.png' %}" alt="전화번호 아이콘" />
+          </span>
+          <span>064-772-3701~3</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/time.png' %}" alt="시간 아이콘" />
+          </span>
+          <span> 11월 ~ 3월 08:30 ~ 18:00<br>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4월 ~ 10월 08:30 ~ 18:30</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/calendar.png' %}" alt="휴무일 아이콘" style="width: 24px;" />
+          </span>
+          <span> 휴관일 : 연중무휴</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/parking.png' %}" alt="주차 아이콘" style="width: 24px;" />
+          </span>
+          <span>주차시설: 가능</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/stroller.png' %}" alt="유모차 아이콘" style="width: 24px;" />
+          </span>
+          <span>유모차 대여 여부: 없음</span>
+          </li>
+          <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/pet.png' %}" alt="애완동물 아이콘" style="width: 24px;" />
+          </span>
+          <span>애완동물 동반 가능 여부: 없음</span>
+          </li>
+                    <li>
+          <span class="icon"> 
+            <img src="{% static 'img/theme/payment.png' %}" alt="신용카드 아이콘" style="width: 24px;" />
+          </span>
+          <span>신용카드 가능 여부: 가능</span>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <!-- 지도를 표시할 div 입니다 -->
+<strong><h5>&nbsp;&nbsp;# 코스정보 </h5></strong><br>
+<div id="map" style="width:100%;height:350px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12b33cfeae96129823a440f07c7b2d91&libraries=services,clusterer"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.56556387,126.9748948), // 지도의 중심좌표
+            level: 7 // 지도의 확대 레벨
+        };
+
+    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+
+    // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+    var linePath = [
+        new kakao.maps.LatLng(37.58077513, 126.9700261), //통인시장
+        new kakao.maps.LatLng(37.56556387,126.9748948), //덕수궁
+        new kakao.maps.LatLng(37.5595462317716,126.994680221224)//남산골한옥마을
+    ];
+
+// 지도에 표시할 선을 생성합니다
+    var polyline = new kakao.maps.Polyline({
+        path: linePath, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#b60039', // 선의 색깔입니다
+        strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid' // 선의 스타일입니다
+    });
+
+// 지도에 선을 표시합니다 
+polyline.setMap(map);  
+
+{% comment %} //여기서부터는 마커
+
+var imageSrc1 = 'data:image/png;base64,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', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+var imageSrc2 = 'data:image/png;base64,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', // 마커이미지의 주소입니다    
+
+var imageSrc3 = 'data:image/png;base64,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', // 마커이미지의 주소입니다    
+
+      
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+var markerImage1 = new kakao.maps.MarkerImage(imageSrc1, imageSize, imageOption),
+    markerPosition1 = new kakao.maps.LatLng(37.58077513, 126.9700261); // 마커가 표시될 위치입니다
+
+var markerImage2 = new kakao.maps.MarkerImage(imageSrc2, imageSize, imageOption),
+    markerPosition2 = new kakao.maps.LatLng(37.56556387,126.9748948); // 마커가 표시될 위치입니다
+
+var markerImage3 = new kakao.maps.MarkerImage(imageSrc3, imageSize, imageOption),
+    markerPosition3 = new kakao.maps.LatLng(37.5595462317716,126.994680221224); // 마커가 표시될 위치입니다 
+
+// 마커가 표시될 위치입니다  
+var markerPosition  = new kakao.maps.LatLng(37.58077513, 126.9700261); {% endcomment %}
+
+
+// 마커가 지도 위에 표시되도록 설정합니다
+{% comment %} marker1.setMap(map); 
+marker2.setMap(map); 
+marker3.setMap(map);  {% endcomment %}
+
+
+var icon1 = new kakao.maps.MarkerImage(
+    '<img src="{% static 'img/theme/marker1.png' %}" alt="마커1 아이콘" />',
+    new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+    { 
+      offset: new kakao.maps.Point(27, 69)
+    }
+);
+var icon2 = new kakao.maps.MarkerImage(
+    '<img src="{% static 'img/theme/marker2.png' %}" alt="마커2 아이콘" />',
+    new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+    { 
+      offset: new kakao.maps.Point(27, 69)
+    }
+);
+var icon3 = new kakao.maps.MarkerImage(
+    '<img src="{% static 'img/theme/marker3.png' %}" alt="마커3 아이콘" />',
+    new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+    { 
+      offset: new kakao.maps.Point(27, 69)
+    }
+);
+
+
+var positions = [
+    {
+        content: '<div><a href="https://place.map.kakao.com/8128836">통인시장</a></div>', 
+        latlng: new kakao.maps.LatLng(37.58077513, 126.9700261),
+    },
+    {
+        content: '<div><a href="https://place.map.kakao.com/10305191">덕수궁</div>', 
+        latlng: new kakao.maps.LatLng(37.56556387,126.9748948)
+    },
+    {
+        content: '<div><a href="https://place.map.kakao.com/8246127">남산골 한옥마을</a></div>', 
+        latlng: new kakao.maps.LatLng(37.5595462317716,126.994680221224)
+    },
+]; 
+
+for (var i = 0; i < positions.length; i ++) {
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng // 마커의 위치
+        image: icon[i],
+    });
+
+    // 마커에 표시할 인포윈도우를 생성합니다 
+    var infowindow = new kakao.maps.InfoWindow({
+        content: positions[i].content // 인포윈도우에 표시할 내용
+    });
+
+    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+    // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+}
+// 마커가 지도 위에 표시되도록 설정합니다
+marker1.setMap(map); 
+marker2.setMap(map); 
+marker3.setMap(map); 
+
+// 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+function makeOverListener(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+function makeOutListener(infowindow) {
+    return function() {
+        infowindow.close();
+    };
+}
+</script>   
+  
+
+</div>
+{% endblock  %}
+{% block footer %}
+<div class="footer text-center">
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo1.png" %}" width="50%">
+<p class="footericontext">홈</p>
+</div>
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo2.png" %}" width="50%">
+<p class="footericontext">랭킹</p>
+</div>
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo3.png" %}" width="50%">
+<p class="footericontext">스팟</p>
+</div>
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo4.png" %}" width="50%">
+<p class="footericontext">마켓</p>
+</div>
+<div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo5.png" %}" width="50%">
+<p class="footericontext">여행공유</p>
+</div>
+</div>
+{% endblock  %}
