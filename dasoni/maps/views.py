@@ -10,7 +10,7 @@ def translate(request):
     return render(request, 'maps/translate.html', context=context)
 
 def index(request):
-    return render(request,'maps/index.html')
+  return render(request,'maps/index.html')
 
 
 def rankingtest(request):
@@ -19,3 +19,4 @@ def rankingtest(request):
 
 def weather(request):
     return render(request,'maps/weather.html')
+
