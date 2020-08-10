@@ -10,6 +10,9 @@ def goods(request):
 def tourtip(request):
     return render(request,'tothers/tourtip.html')
 
+def stamp(request):
+    return render(request,'tothers/stamp.html')
+
 def theme(request,cont,lang):
     url='tothers/theme_'+cont+'_'+lang+'.html'
     return render(request, url)
@@ -22,3 +25,4 @@ def index(request):
     match_first = result['documents'][0]['address']
     print(float(match_first['y']), float(match_first['x']))
     return render(request, 'tothers/index.html')
+

@@ -3,15 +3,18 @@
 @font-face { font-family: 'MapoPeacefull'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff'); font-weight: normal; font-style: normal; }    
 
 body{
-    font-family: 'MapoPeacefull'; 
+    font-family: 'MapoPeacefull';
+     
 }
 .carousel-content { 
 position: absolute; 
-bottom: 10%;  
+bottom: 10%;
 left: 5%;  
-z-index: 20;  
-color: white;  
-text-shadow: 0 1px 2px rgba(0,0,0,.6); 
+z-index: 10;  
+color: black;
+font-weight: 900;
+text-shadow: 0 1px 2px rgba(0,0,0,.6);
+
 }
 
 .footer {
@@ -26,8 +29,8 @@ width:20%
 .mainicon{
 display:flex;
 flex-direction:row;
-padding-top: 5%;
-padding-bottom:5%;
+padding-top: 3%;
+padding-bottom:3%;
 padding-left:10%;
 padding-right:10%;
 }
@@ -38,7 +41,7 @@ width:33.33%
 
 .mainicontext{
 padding-top:5%;
-font-size: 125%;
+font-size: 105%;
 font-weight: bold;
 }
 
@@ -62,7 +65,7 @@ font-weight: bold;
 }
 
 .goodsboxtext{
-    font-size: 0%;
+    font-size: 70%;
 
 }
 
@@ -87,6 +90,90 @@ font-weight: bold;
     padding-top:7%;
 }
 
+.stamplogo{
+    margin-right: 0px;
+}
+.stamp{
+    margin:6%;
+}
+.stamptext{
+    margin-right:10%;
+}
+.stamp1{
+    margin-left: 8%;
+    margin-right: 8%;
+
+}
+.stamp1text{
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+}
+.stampmain{
+    display:flex;
+    justify-content: center;
+}
+
+.stampback{   
+    width: 95%;
+    height: 650px;
+    background-size: 100% 100%;
+}
+
+.stamptop{
+    margin-top:8%;
+    margin-bottom:8%;
+    font-weight:bold;
+}
+.stamphead{
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+.stamp2text{
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.coltext{
+    padding-left: 0px;
+    padding-right: 0px; 
+}
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.caro{    
+    font-family: 'ImcreSoojin';
+}
+
+.mainweather{
+    display:flex;
+    flex-direction:row;   
+    padding-left:3%;
+    font-size: 0.6rem;
+    
+}
+
+.mainweather div{
+    width:16%
+}
+
+.weatherrow{
+    padding-bottom: 1%;
+    font-family: 'ImcreSoojin';
+    font-size: 0.8rem;
+    font-family: 'MapoPeacefull';
+}
+
+.weather{
+    margin-top: 4%;
+    padding-top: 1%;
+    margin-bottom: 4%;
+    padding-bottom: 1%;
+    background-color: whitesmoke;
 }
 @media all and (min-width:768px){
 body{
