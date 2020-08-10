@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 def goods(request):
     return render(request,'tothers/goods.html')
