@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/basecss.css'%}">
+{% endblock  %}
+
+
+{% block content %}
+<br>
+<h5 class="text-center font-weight-bold">굿즈 판매</h5><br>
+<div class="goods">
+    <div class="card">
+    <img src="{% static "img/goods1_1.jpg" %}" width="100%" height="60%">
+    <br>
+    <p class="text-center font-weight-bold goodsboxtext">
+    방탄소년단 레모나<br>
+    120포 랜덤발송<br>
+    <span class="goodsprice">25,000원</span>
+    </p>       
+    </div>
+    <div class="card">
+    <img src="{% static "img/goods2_1.jpg" %}" width="100%" height="60%">
+    <br>
+    <p class="text-center font-weight-bold goodsboxtext">
+    방탄소년단 스텐컵<br>
+    7종 중 택 1<br>
+    <span class="goodsprice">15,000원</span>
+    </p>       
+    </div>
+</div>
+
+<div class="goods">
+    <div class="card">
+    <img src="{% static "img/goods3_1.jpg" %}" width="100%" height="60%">
+    <br>
+    <p class="text-center font-weight-bold goodsboxtext">
+    엑소 빼빼로 12갑<br>
+    초코,바닐라,누드,아몬드 3갑씩<br>
+    <span class="goodsprice">12,000원</span>
+    </p>       
+    </div>
+    <div class="card">
+    <img src="{% static "img/goods4_1.jpg" %}" width="100%" height="60%">
+    <br>
+    <p class="text-center font-weight-bold goodsboxtext">
+    엑소 핸디형 선풍기<br>
+    본체 + 스트랩 + USB케이블<br>
+    <span class="goodsprice">20,000원</span>
+    </p>       
+    </div>
+</div>
+
+<div class="goods">
+    <div class="card">
+    <img src="{% static "img/goods5_1.jpg" %}" width="100%" height="60%">
+    <br>
+    <p class="text-center font-weight-bold goodsboxtext">
+    NCT 핸디형 선풍기<br>
+    본체 + 스트랩 + USB케이블<br>
+    <span class="goodsprice">20,000원</span>
+    </p>       
+    </div>
+    <div class="card">
+    <img src="{% static "img/goods6_1.jpg" %}" width="100%" height="60%">
+    <br>
+    <p class="text-center font-weight-bold goodsboxtext">
+    미스터트롯<br>
+    응원봉, 응원봉 파우치 셋트<br>
+    <span class="goodsprice">38,000원</span>
+    </p>       
+    </div>
+</div>
+
+<h6 class="text-center font-weight-bold">상단에 없는 굿즈의 경우에도<br>
+구매 가능한 공식 굿즈는 배송 가능합니다.<br>
+자세한 사항은 문의사항에 남겨주세요.
+</h6>
+
+{% endblock  %}

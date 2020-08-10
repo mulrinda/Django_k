@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 
-# Create your views here.
+def goods(request):
+    return render(request,'tothers/goods.html')
 
-def test(request):
-    return render(request, 'tothers/theme1.html')
+def tourtip(request):
+    return render(request,'tothers/tourtip.html')

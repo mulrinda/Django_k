@@ -1,14 +1,22 @@
 from django.shortcuts import render
-# from Tools.scripts.google import Translator
+from googletrans import Translator
 # Create your views here.
+def translate(request):
+    # translator = Translator()
+    # result = translator.translate('안녕하세요')
+    context = {
+        "text" : '안녕하세요'
+    }
+    return render(request, 'maps/translate.html', context=context)
+
 def index(request):
-#     translator = Translator()
-#     result = translator.translate('안녕', dest='ja')
-#     context = {
-#         "text" : result[0].text
-#     }
-    return render(request, 'maps/index.html', context=context)
+  return render(request,'maps/index.html')
 
 
-def theme(request):
-    return render(request, 'maps/theme.html')
+def rankingtest(request):
+    return render(request, 'maps/rankingtest.html')
+
+
+def weather(request):
+    return render(request,'maps/weather.html')
+

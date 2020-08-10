@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{% block style %}
+<style>
+.card {
+    margin-left: 3rem;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 0;
+    
+}
+
+
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    width: 7rem;
+    height: 2rem;
+    font-size: 10px;
+    text-align: center;
+    line-height: 2rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+nav li::before,
+nav li::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+nav li::before {
+    background-color: #ffcccc;
+    z-index: -1;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+nav li::after {
+    background-color: #ff6666;
+    transform: translate(1rem, 1rem);
+    z-index: -2;
+}
+
+nav li:hover {
+    transform: translate(1.5rem, 1.5rem);
+    color: white;
+}
+
+nav li:hover::before {
+    background-color: #ff6666;
+}
+
+nav li:hover::after {
+    background-color: white;
+    transform: translate(-1.5rem, -1.5rem);
+}
+</style>
+{% endblock  %}
+{% block content %}
+{% comment %} <div class="card" style="max-width: 600px;"  style="margin-left: 0rem;">
+  <div class="row no-gutters">
+    <div class="col-4">
+      <img src="{% static 'img_spot/btsrm.png' %}" class="card-img" style="height: 240px; border-top-left-radius: 20px; border-botton-left-radius: 20px;">
+    </div>
+    <div class="col-8">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: blod;">RM과 하는 한국역사 여행</h5>
+        <p class="card-text">BTS RM이 갔던 한국 대표 문화유적지를 직접 만나보다!</p>
+        <nav style="margin-left: 3rem;">
+        <ul>
+        <a href="#" style="text-decoration: none;"><li>예약하기<i class="fas fa-hand-pointer pl-1"></i></li></a>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<br> {% endcomment %}
+
+
+
+<div class="card" style="width: 18rem;">
+  <img src="{% static 'img_spot/btsrm.png' %}" class="card-img-top" style= "border-top-right-radius: 20px; border-top-left-radius: 20px;">
+  <div class="card-body">
+    <h5 class="card-title" ><b>RM과 하는 한국역사 여행</b></h5>
+    <p class="card-text">BTS RM이 갔던 한국 대표 문화유적지를 직접 만나보다!</p>
+     <nav style="margin-left: 6rem;">
+      <ul>
+        <a href="#" style="text-decoration: none;"><li>예약하기<i class="fas fa-hand-pointer pl-1"></i></li></a>
+      </ul>
+    </nav>
+  </div>
+</div>
+<br>
+
+<div class="card" style="width: 18rem;">
+  <img src="{% static 'img_spot/twice.png' %}" class="card-img-top" style= "border-top-right-radius: 20px; border-top-left-radius: 20px;">
+  <div class="card-body">
+    <h5 class="card-title"><b>트와이스와 하는 양평 여행</b></h5>
+    <p class="card-text">양평 어디까지 가봤니? </p>
+     <nav style="margin-left: 6rem;">
+      <ul>
+        <a href="#" style="text-decoration: none;"><li>예약하기<i class="fas fa-hand-pointer pl-1"></i></li></a>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+{% endblock  %}

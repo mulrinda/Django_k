@@ -4,5 +4,6 @@ from . import views
 app_name = 'tothers'
 
 urlpatterns = [
-     path('test/', views.test, name='test'), # semi(0803) : theme개별페이지 테스트중
+    path('goods', views.goods, name='goods'),
+    path('tourtip', views.tourtip, name='tourtip'),
 ]
