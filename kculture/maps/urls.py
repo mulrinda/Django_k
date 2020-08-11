@@ -5,4 +5,4 @@ app_name = 'maps'
 
 urlpatterns = [
     path('',views.index,name='index'),
-
+]
