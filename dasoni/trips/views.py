@@ -3,8 +3,15 @@ from .models import Post
 from .forms import PostForm
 
 # Create your views here.
+
 def spotchart(request):
     return render(request, 'trips/spotchart.html')
+
+
+def photo(request):
+    return render(request, 'trips/photo.html')
+
+
 def share(request):
     posts = Post.objects.all()
     context = {
