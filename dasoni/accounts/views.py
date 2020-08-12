@@ -55,27 +55,36 @@ def logout(request):
     auth_logout(request)
     return redirect('index')
 
-# def index(request):
-#     return render(request, 'accounts/index.html')
 
-# @login_required
-# def update(request):
-#     # form = CustomUserChangeForm(instance = request.user)
-#     user = User.objects.get(username=request.user)
-#     if request.method == 'POST':
-#         form = CustomUserChangeForm(request.POST, instance=user)
-#         print(form.data)
-#         print(form.errors)
-#         print(form.is_valid())
-#         if form.is_valid():
-#             form.save()
-#             return redirect('accounts:update')
-#     else:
-# 	    form = CustomUserChangeForm(instance=user)
-
-#     context = {
-#         'form': form,
-#     }
-#     return render(request, 'accounts/mypage.html', context)
+@login_required
+def password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)  # Important!
+            messages.success(request, '비밀번호가 성공적으로 변경되었습니다!')
+            return redirect('accounts:profile', request.user.username)
+    else:
+        form = PasswordChangeForm(request.user)
+        context={
+            'form':form,
+        }
+    return render(request, 'accounts/password.html', context)
 
 
+@login_required
+def update(request):
+    if request.method == 'POST':
+        form = CustomUserChangeForm(
+            request.POST, instance=request.user
+            )
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:profile', request.user.username)
+    else:
+        form = CustomUserChangeForm(instance=request.user)
+    context = {
+        'form': form,
+    }
+    return render(request, 'accounts/update.html', context)
