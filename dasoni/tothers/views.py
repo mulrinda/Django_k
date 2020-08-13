@@ -18,7 +18,7 @@ def theme(request,cont,lang):
     return render(request, url)
 
 # 카카오로 위경도 받아올때 참고하려고 index에 넣어놓음. addr에 주소변경하면 실행할때 터미널에 위경도 뜸
-addr='서울특별시 중구 퇴계로34길 28'
+addr='서울 중구 무교로 19 더익스체인지서울'
 def index(request):
     url = 'https://dapi.kakao.com/v2/local/search/address.json?query=' + addr
     headers = {"Authorization": "KakaoAK 073a393656181c6073880062d3507191"}
