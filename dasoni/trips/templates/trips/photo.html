@@ -295,7 +295,6 @@
         </div>
         {% endfor %}
         <div id="photo-bt">
-        
             <a href="{% url 'trips:create' %}"><button type="button" class="btn btn-info btn-circle btn-xl"><i class="fas fa-file-upload" title="Upload" data-toggle="tooltip" data-placement="bottom"></i></button></a>
             <button type="button" class="btn btn-warning btn-circle btn-xl" onclick="onPrint()"><i class="fas fa-print" title="Print" data-toggle="tooltip" data-placement="bottom"></i></button>
             <a href="{% url 'trips:social' %}"><button type="button" class="btn btn-danger btn-circle btn-xl"> <i class="fas fa-share" title="share" data-toggle="tooltip" data-placement="bottom"></i></button></a>
@@ -317,22 +316,22 @@
             <a href="#" class="menu-item"> <span style="color:white"><i class="far fa-comment fa-lg"></i></span> </a>
 
             </nav> {% endcomment %}
-        
+            
         </div>
     <!--로그인 안되었을때 샘플 포토카드와 로그인, 회원가입 안내 메세지-->
     {% else %}
-          <div class="cardarea">
+            <div class="cardarea">
                 <img src="{% static 'img/namsan2.jpg' %}"  id="photo">
                 <div class="inform">
                     <p class="phototext">포토카드 샘플</p>
                     <p class="phototext">2020.08.08</p>
                     <p class="phototext">추억하고 싶은날♡</p>
                 </div>
-        </div>
-        <div >
+            </div>
+            <div>
             <p style="text-align:center;">로그인 or  회원가입을 하면</p>
             <p style="text-align:center;">나만의 포토카드를 소장할 수 있어요!</p>
-        </div>
+            </div>
     {% endif %}
    
     
