@@ -306,7 +306,7 @@
         <div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo1.png" %}" width="50%">
             <p class="footericontext">홈</p>
         </div>
-        <div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo2.png" %}" width="50%">
+        <div onClick="location.href ='{% url 'trips:spotchart' %}'"><img src="{% static "img/footlogo2.png" %}" width="50%">
             <p class="footericontext">랭킹</p>
         </div>
         <div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo3.png" %}" width="50%">
@@ -315,7 +315,7 @@
         <div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo4.png" %}" width="50%">
             <p class="footericontext">마켓</p>
         </div>
-        <div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo5.png" %}" width="50%">
+        <div onClick="location.href ='{% url 'trips:photo' %}'"><img src="{% static "img/footlogo5.png" %}" width="50%">
             <p class="footericontext">여행공유</p>
         </div>
     </div>
