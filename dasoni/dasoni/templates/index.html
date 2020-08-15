@@ -89,19 +89,19 @@
 
 <div class="mainicon text-center">
 
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo1.png" %}" width="45%">
+<div onClick="location.href ='{% url 'maps:categorysing' %}'"><img src="{% static "img/mainlogo1.png" %}" width="45%">
 <p class="mainicontext">가수</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo2.png" %}" width="45%">
+<div onClick="location.href ='{% url 'maps:categorydrama' %}'"><img src="{% static "img/mainlogo2.png" %}" width="45%">
 <p class="mainicontext">드라마/영화</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo3.png" %}" width="45%">
+<div onClick="location.href ='{% url 'maps:categoryenter' %}'"><img src="{% static "img/mainlogo3.png" %}" width="45%">
 <p class="mainicontext">예능</p>
 </div>
 </div>
 
 <div class="mainicon text-center">
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo4.png" %}" width="45%">
+<div onClick="location.href ='{% url 'trips:dasonitour' %}'"><img src="{% static "img/mainlogo4.png" %}" width="45%">
 <p class="mainicontext">투어 예약</p>
 </div>
 <div onClick="location.href ='{% url 'tothers:tourtip' %}'"><img src="{% static "img/mainlogo5.png" %}" width="45%">
@@ -116,10 +116,10 @@
 <div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo7.png" %}" width="45%">
 <p class="mainicontext">회사 소개</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo8.png" %}" width="45%">
+<div onClick="location.href ='{% url 'trips:spotchart' %}'"><img src="{% static "img/mainlogo8.png" %}" width="45%">
 <p class="mainicontext">스팟 랭킹</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/mainlogo9.png" %}" width="45%">
+<div onClick="location.href ='{% url 'trips:photo' %}'"><img src="{% static "img/mainlogo9.png" %}" width="45%">
 <p class="mainicontext">포토 카드</p>
 </div>
 
@@ -131,7 +131,7 @@
 <div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo1.png" %}" width="50%">
 <p class="footericontext">홈</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo2.png" %}" width="50%">
+<div onClick="location.href ='{% url 'trips:spotchart' %}'"><img src="{% static "img/footlogo2.png" %}" width="50%">
 <p class="footericontext">랭킹</p>
 </div>
 <div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo3.png" %}" width="50%">
@@ -140,7 +140,7 @@
 <div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo4.png" %}" width="50%">
 <p class="footericontext">마켓</p>
 </div>
-<div onClick="location.href ='http://URL주소'"><img src="{% static "img/footlogo5.png" %}" width="50%">
+<div onClick="location.href ='{% url 'trips:photo' %}'"><img src="{% static "img/footlogo5.png" %}" width="50%">
 <p class="footericontext">포토카드</p>
 </div>
 </div>

@@ -20,3 +20,14 @@ def rankingtest(request):
 def weather(request):
     return render(request,'maps/weather.html')
 
+
+def categorysing(request):
+    return render(request, 'maps/categorysing.html')
+
+
+def categorydrama(request):
+    return render(request, 'maps/categorydrama.html')
+
+
+def categoryenter(request):
+    return render(request, 'maps/categoryenter.html')

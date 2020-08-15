@@ -6,4 +6,5 @@ app_name = 'groups'
 urlpatterns = [
     path('', views.index, name='index'),
     path('ranking', views.ranking, name='ranking'),
+  
 ]
