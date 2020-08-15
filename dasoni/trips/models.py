@@ -10,3 +10,4 @@ class Post(models.Model):
     post_date = models.DateTimeField(auto_now_add=True)
     post_img = models.ImageField(upload_to='media')
     post_user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='post_user', null=True)
+
