@@ -7,7 +7,6 @@ class Spot(models.Model):
     lat = models.FloatField()
     lon = models.FloatField()
     spot_info = models.CharField(max_length=500)
-    spot_stamp = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='spot_user', null=True)
     spot_img = models.CharField(max_length=500)
     
 class Theme(models.Model):

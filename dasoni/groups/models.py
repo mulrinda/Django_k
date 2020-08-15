@@ -7,7 +7,7 @@ class Star(models.Model):
     star_groupname = models.CharField(max_length=500)
     star_name = models.CharField(max_length=500)
     star_img = models.CharField(max_length=500)
-    spot_cd = models.ManyToManyField(Spot, related_name='spot_actor', null=True)
+    spot_cd = models.ManyToManyField(Spot, related_name='spot_star', null=True)
 
 
 class Visit(models.Model):

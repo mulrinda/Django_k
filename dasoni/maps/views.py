@@ -31,3 +31,4 @@ def categorydrama(request):
 
 def categoryenter(request):
     return render(request, 'maps/categoryenter.html')
+
