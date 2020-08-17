@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'groups',
     'tothers',
     'trips',
+    'carts',
     'bootstrap4',
     'import_export',
     'googletrans',
