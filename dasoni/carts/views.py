@@ -12,6 +12,12 @@ def _cart_id(request):
     return cart
 
 def add_cart(request, product_id):
+<<<<<<< HEAD
+    #product = Product.objects.get(id=product_id)
+    #try:
+    #    cart = Cart.objects.get(cart_id=_cart_id(request))    
+    pass
+=======
     product = Product.objects.get(id=product_id)
     try:
         cart = Cart.objects.get(cart_id=_cart_id(request))    
@@ -45,3 +51,4 @@ def cart_detail(request, total=0, counter=0, cart_itmes = None):
 
     return render(request, 'carts/cart.thml', dict(cart_items = cart_items, total=total, counter=counter))
         
+>>>>>>> 17485aaae7c4ca66edc7c3aeebd9b209f3d531f0
