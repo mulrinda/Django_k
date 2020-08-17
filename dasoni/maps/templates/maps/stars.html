@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!--2020.08.15 gyuyoung 작성-->
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/basecss.css'%}">
+<style>
+    .menu{
+        display : none;
+    }
+    #checkbox1, .menu{
+        text-align : center;
+        margin-left : auto;
+        margin-right : auto;
+    }
+</style>
+
+{% endblock %}
+{% block content %}
+    <div id="checkbox1">
+        <span id='starlist'>☰더보기☰</span>
+        <div class="menu demo">
+            <div><a href="#">HOME</a></div>
+            <div><a href="#">ABOUT</a></div>  
+            <div><a href="#">CONTACT</a></div>  
+            <div><a href="#">FAQ</a></div>  
+            <!-- star 파일 작성 후 아래 파일로 -->
+            {% for star in stars %}
+                <div class="stars">
+                    <a href="#">{{ star }}</a>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- <span class="toggle">☰</span> -->
+    </div>
+
+    <div id="map" style="width:100%;height:350px;"></div>
+
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>   
+        // star이름 나오면서 분류
+        $( document ).ready( function() {
+            jQuery.noConflict(); 
+            $( 'div#checkbox1' ).click( function() {
+                $( '.menu' ).slideToggle();
+            } );
+        } );
+    </script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12b33cfeae96129823a440f07c7b2d91&libraries=services,clusterer"></script>
+    <script>
+        var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div
+                center : new kakao.maps.LatLng(35.924191, 127.795820), // 지도의 중심좌표
+                level : 13, // 지도의 확대 레벨
+            });
+        var clusterer = new kakao.maps.MarkerClusterer({
+                    map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
+                    averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정 
+                    minLevel: 10, // 클러스터 할 최소 지도 레벨 
+                    disableClickZoom: true // 클러스터 마커를 클릭했을 때 지도가 확대되지 않도록 설정한다
+                });
+
+        $.get("/static/maps/spot.json", function(data) {
+                // 데이터에서 좌표 값을 가지고 마커를 표시합니다
+                // 마커 클러스터러로 관리할 마커 객체는 생성할 때 지도 객체를 설정하지 않습니다
+                console.log(data)
+                var markers = $(data).map(function(i, fields) {
+                        // var storeName = fields.fields.store;
+                        //console.log(fields.fields.lat);
+                        
+                        // var infoContent = "<a href='/stores/"+fields.pk+"/'>"+ storeName+"</a>"
+                        //console.log("{{ stores.k }}");
+                        var marker =  new kakao.maps.Marker({
+                            position : new kakao.maps.LatLng(fields.fields.lat, fields.fields.lon),
+                            clickable: true
+                        });
+                        // var infowindow = new kakao.maps.InfoWindow({
+                        //     content: infoContent // 인포윈도우에 표시할 내용
+                        // });
+
+                        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                        // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                        // 클러스터러에 마커들을 추가합니다
+                        // kakao.maps.event.addListener(marker, 'click', makeClickListener(map, marker, infowindow));
+                        return marker
+                    });
+                clusterer.addMarkers(markers);
+
+            });;
+        function makeClickListener(map, marker, infowindow) {
+            // 마커 위에 인포윈도우를 표시합니다
+            return function() {
+                infowindow.open(map, marker);  
+            };
+        };
+    </script>
+{% endblock %}

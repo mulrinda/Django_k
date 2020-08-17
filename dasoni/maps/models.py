@@ -11,6 +11,6 @@ class Spot(models.Model):
     
 class Theme(models.Model):
     theme_name = models.CharField(max_length=500)
-    actor_img = models.CharField(max_length=500)
+    star_img = models.CharField(max_length=500)
     spot_cd = models.ForeignKey(Spot, on_delete=models.CASCADE, null=True)
     theme_img = models.CharField(max_length=500)

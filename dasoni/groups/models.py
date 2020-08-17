@@ -6,7 +6,6 @@ class Star(models.Model):
     star_sort = models.IntegerField()
     star_groupname = models.CharField(max_length=500)
     star_name = models.CharField(max_length=500)
-    star_img = models.CharField(max_length=500)
     spot_cd = models.ManyToManyField(Spot, related_name='spot_star', null=True)
 
 
@@ -18,3 +17,8 @@ class Visit(models.Model):
     visit_user = models.IntegerField()
     visit_date = models.DateTimeField(auto_now_add=True)
     visit_star_king = models.CharField(max_length=500)
+
+
+class StarImg(models.Model):
+    name = models.CharField(max_length=500)
+    img = models.CharField(max_length=500)

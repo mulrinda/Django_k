@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from googletrans import Translator
+from groups.models import Star
+
 # Create your views here.
 def translate(request):
     # translator = Translator()
@@ -32,3 +34,9 @@ def categorydrama(request):
 def categoryenter(request):
     return render(request, 'maps/categoryenter.html')
 
+def stars(request):
+    stars = Star.objects.all()
+    context = {
+        'stars' : stars
+    }
+    return render(request, 'maps/stars.html')
